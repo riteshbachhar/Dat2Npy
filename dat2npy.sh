@@ -18,4 +18,7 @@ source /modules/opt/linux-ubuntu24.04-x86_64/miniforge3/24.7.1/etc/profile.d/con
 conda deactivate
 conda activate SurModel
 
-python dat2npy.py --data-dir ../Teukolsky_Code_Data/Waveform_Data_Long/ --out-dir ../Teukolsky_Code_Data/Waveform_Data_Long_npy
+python parallel_dat2npy.py --data-dir ../Teukolsky_Code_Data/Waveform_Data_Long_Full/ \
+                           --out-dir ../Teukolsky_Code_Data/Waveform_Data_Long_npy \
+                           --num-workers 16
+
